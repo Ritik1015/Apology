@@ -1,8 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dear Bubu ❤️</title>
+
 <link rel="stylesheet" href="style.css?v=1">
-<title>Memories</title>
+
+<style>
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e1b4b);
+    color:white;
+    padding:20px;
+}
+
+.letter{
+    max-width:900px;
+    width:100%;
+}
+
+#typing{
+    margin-top:20px;
+    font-size:20px;
+    line-height:1.8;
+    white-space:pre-line;
+}
+
+.btn{
+    margin-top:30px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+}
+</style>
+
 </head>
 
 <body>
@@ -14,9 +52,7 @@
 <div id="typing"></div>
 
 <a href="timeline.html">
-<button class="btn">
-Continue ❤️
-</button>
+<button class="btn">Continue ❤️</button>
 </a>
 
 </div>
@@ -24,39 +60,60 @@ Continue ❤️
 <script>
 
 const text = `
+
 Jab aap meri life me aayi thi,
+
 tab mujhe nahi pata tha ki koi insaan itna special ho sakta hai.
 
 Sabse pehle aapne mujhe propose kiya tha.
 
 Aapne mujhe bahut pyaar diya...
-bahut trust diya...
-bahut care di...
+Bahut trust diya...
+Bahut care di...
 
 Lekin sach kahu...
-main uss pyaar ko sambhal nahi paya.
+
+Main uss pyaar ko sambhal nahi paya.
 
 Maine galtiyan ki.
+
 Maine aapko hurt kiya.
 
 Aur mujhe har galti ka afsos hai.
 
-Lekin mera pyaar kabhi kam nahi hua.
+Kabhi kabhi lagta hai ki kaash main time ko wapas le ja pata.
 
-- Your Dudu ❤️
+Kaash main aapko woh pyaar de pata jiski aap hamesha haqdar thi.
+
+Lekin ek baat kabhi nahi badli...
+
+Aur woh hai mera pyaar.
+
+Aaj bhi meri duniya ki sabse khoobsurat cheez...
+
+Aap ho Bubu ❤️
+
+- Your Dudu 🥺❤️
+
 `;
 
-let i=0;
+let i = 0;
 
-function type(){
-if(i<text.length){
-document.getElementById("typing").innerHTML += text.charAt(i);
-i++;
-setTimeout(type,40);
-}
+function typeWriter() {
+
+    if(i < text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter,40);
+
+    }
+
 }
 
-type();
+window.onload = typeWriter;
 
 </script>
 
