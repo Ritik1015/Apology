@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css?v=1">
+<title>Will You Give Me One Chance?</title>
+</head>
+
+<body>
+
+<div class="glass">
+
+<h1>Bubu ❤️</h1>
+
+<p>
+
+Pehle aapne mujhe propose kiya tha.
+
+Aur maine aapke pyaar ko utni achhi tarah nahi sambhala
+jitna mujhe sambhalna chahiye tha.
+
+Lekin aaj...
+
+Main aapse ek aur mauka maangta hu.
+
+Main promise karta hu...
+
+Is baar main aapko aur zyada pyaar karunga.
+
+Har din choose karunga.
+
+Har din appreciate karunga.
+
+Aur kabhi aapko akela mehsoos nahi hone dunga.
+
+Kya aap apne Dudu ko ek aur chance dogi? ❤️
+
+</p>
+
+<div class="buttons">
+
+<button onclick="yesClick()">
+YES ❤️
+</button>
+
+<button id="no">
+NO 😒
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+const no=document.getElementById("no");
+
+no.addEventListener("mouseover",()=>{
+
+no.style.position="absolute";
+
+no.style.left=Math.random()*80+"%";
+no.style.top=Math.random()*80+"%";
+
+});
+
+function yesClick(){
+
+localStorage.setItem("bubu","yes");
+
+document.body.innerHTML=`
+
+<div class='success'>
+
+<h1>YAYYYYY ❤️</h1>
+
+<h2>Thank You Bubu 🥺</h2>
+
+<h3>I Love You Forever ♾️</h3>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
