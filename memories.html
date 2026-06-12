@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css?v=1">
+<title>Memories</title>
+</head>
+
+<body>
+
+<div class="glass letter">
+
+<h1>Dear Bubu 💌</h1>
+
+<div id="typing"></div>
+
+<a href="timeline.html">
+<button class="btn">
+Continue ❤️
+</button>
+</a>
+
+</div>
+
+<script>
+
+const text = `
+Jab aap meri life me aayi thi,
+tab mujhe nahi pata tha ki koi insaan itna special ho sakta hai.
+
+Sabse pehle aapne mujhe propose kiya tha.
+
+Aapne mujhe bahut pyaar diya...
+bahut trust diya...
+bahut care di...
+
+Lekin sach kahu...
+main uss pyaar ko sambhal nahi paya.
+
+Maine galtiyan ki.
+Maine aapko hurt kiya.
+
+Aur mujhe har galti ka afsos hai.
+
+Lekin mera pyaar kabhi kam nahi hua.
+
+- Your Dudu ❤️
+`;
+
+let i=0;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(type,40);
+}
+}
+
+type();
+
+</script>
+
+</body>
+</html>
